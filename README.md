@@ -35,3 +35,10 @@ kotlin in action study repository
 ### 멤버
 
 - 책을 읽습니다. 이슈 트래커에 질문을 작성합니다.
+
+--- 
+코틀린 예제 파일 실행 방법
+1. Project Structure에서 해당 파일을 Mudule(impoert)로 추가합니다.
+![코틀린 예제 파일 실행 방법.png](코틀린 예제 파일 실행 방법.png)
+
+
