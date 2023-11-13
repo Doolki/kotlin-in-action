@@ -43,7 +43,13 @@ fun main(args: Array<String>){
     /*println(mix(BLUE, YELLOW))*/
 
     // 분기에 블록 사용
-    println(evalWithLogging(Sum(Sum(Num(1), Num(2)), Num(4))))
+    /*println(evalWithLogging(Sum(Sum(Num(1), Num(2)), Num(4))))*/
+
+    // in으로 컬렉션 범위 원소 검사
+    fun isLetter(c: Char) = c in 'a'..'z' || c in 'A'..'Z'
+    fun isNotDigit(c: Char) = c !in '0'..'9'
+    println(isLetter('q'))
+    println(isNotDigit('x'))
 }
 
 class Person(val name: String, var isMarried: Boolean)
