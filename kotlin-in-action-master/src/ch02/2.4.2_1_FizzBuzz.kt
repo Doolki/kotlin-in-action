@@ -9,6 +9,6 @@ fun fizzBuzz(i: Int) = when {
 
 fun main(args: Array<String>) {
     for (i in 1..100) {
-        print(fizzBuzz(i))
+        println(fizzBuzz(i))
     }
 }
