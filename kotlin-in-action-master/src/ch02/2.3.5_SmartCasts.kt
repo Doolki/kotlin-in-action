@@ -6,8 +6,9 @@ class Sum(val left: Expr, val right: Expr) : Expr
 
 fun eval(e: Expr): Int {
     if (e is Num) {
-        val n = e as Num
-        return n.value
+        /*val n = e as Num
+        return n.value*/
+        return e.value
     }
     if (e is Sum) {
         return eval(e.right) + eval(e.left)
