@@ -1,7 +1,8 @@
 @file:JvmName("StringFunctions")
 package strings
 
-fun <T> joinToString(
+
+fun <T> joinToString4(
     collection: Collection<T>,
     separator: String,
     prefix: String,
@@ -17,4 +18,16 @@ fun <T> joinToString(
 
     result.append(postfix)
     return result.toString()
+}
+
+/*
+    String -> 수신객체 타입
+    this -> 수신객체 타입
+ */
+fun String.lastChar2():Char {
+    return this.get(this.length-1);
+}
+
+fun String.frist():Char {
+    return this.get(0);
 }

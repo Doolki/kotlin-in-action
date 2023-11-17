@@ -1,5 +1,11 @@
 package ch03.study.study_3_2
 
+import Maths.*
+import strings.*
+
+import strings.frist as fristNum
+
+
 /* 3.2.1 */
 fun <T> joinToString1(
     collection: Collection<T>,
@@ -58,5 +64,9 @@ fun main(args: Array<String>) {
     println(joinToString2(list, separator=";", prefix="("));
     println(joinToString2(list, separator=";", postfix=")"));
 
-
+    /* 3.2.3 유틸리티 함수로 호출 */
+    println(add(1,2));
+    println(joinToString4(list, separator=";", prefix="(", postfix=")"))
+    println("Kotlin".lastChar2());//수신객체 타입
+    println("Kotlin".fristNum());//임포트한 함수를 다른 이름으로 부를 수 있다.
 }
