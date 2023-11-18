@@ -1,6 +1,10 @@
 package ch03.study.study_3_2;
 
 import java.util.*;
+import Maths.MathFunctions;
+import strings.*;
+
+
 
 
 class collection {
@@ -19,6 +23,10 @@ class collection {
         System.out.println(joinToString(list, "; ")); // 매개변수 2개
         System.out.println(joinToString(list, "; ", "(")); // 매개변수 3개
         System.out.println(joinToString(list, "; ", "(", ")")); // 매개변수 4개
+
+        //3.2.3 유틸리티 함수로 직접 호출
+        System.out.println(MathFunctions.add(1,2));
+        System.out.println(StringFunctions.joinToString4(list, ";", "(", ")"));
     }
 
 
@@ -76,3 +84,17 @@ class collection {
         return result.toString();
     }
 }
+
+/*
+    특징: 구아바는 컬렉션, 캐싱, 프리미티브 지원, 동시성 라이브러리, 공통 어노테이션, 문자열 처리, I/O 등을 포함한 광범위한 유틸리티를 제공합니다.
+    용도: 예를 들어, 구아바에서는 Joiner 클래스를 사용하여 컬렉션의 요소를 원하는 구분자로 연결할 수 있습니다. 이는 Java의 String.join 또는 java.util.stream.Collectors.joining과 유사한 기능을 제공하지만 더 많은 기능과 유연성을 가지고 있습니다.
+    // 구아바를 사용한 문자열 합치기
+    String joined = Joiner.on("; ").join(Arrays.asList(1, 2, 3));
+    아파치 커먼즈 (Apache Commons)
+
+    개발자: Apache Software Foundation
+    특징: 아파치 커먼즈는 수학 연산, 파일 입출력, 문자열 처리, 네트워킹 등 다양한 목적의 유틸리티를 제공합니다.
+    용도: 예를 들어, commons-lang 컴포넌트는 StringUtils 클래스를 제공하여 문자열 조작과 관련된 다양한 헬퍼 메서드를 사용할 수 있게 합니다.
+    // 아파치 커먼즈를 사용한 문자열 체크
+    boolean isNumeric = StringUtils.isNumeric("12345");
+ */

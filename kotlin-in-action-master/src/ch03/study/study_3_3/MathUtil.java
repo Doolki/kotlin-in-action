@@ -1,4 +1,4 @@
-package ch03.study.study_3_2;
+package ch03.study.study_3_3;
 
 /*
     3.2.3 자바에서 유틸리티 클래스를 만들때 다음과 같이 설계
@@ -20,6 +20,4 @@ final class MathUtil {
     public static int subtract(int a, int b) {
         return a - b;
     }
-
-    // 다른 유틸리티 메서드들...
 }
