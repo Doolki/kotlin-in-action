@@ -13,9 +13,10 @@ class Number(val value: Int) {
     infix fun add(other: Number): Number {
         return Number(this.value + other.value) //현재 객체와 다른 객체의 Value값을 더한 것 을 리턴
     }
+
     // 구조 분해 선언을 위한 component1 함수.. (7.2절에서 다룰예정)
     operator fun component1() = this.value
-    operator fun component2() = this.value
+    operator fun component2() = this.value  // 동일한 값을 반환
 }
 
 fun main(args: Array<String>) {
@@ -55,16 +56,6 @@ fun main(args: Array<String>) {
     println(result2.value);
 
 
+    /* 구조 분해 호출 */
 
 }
-/*
-fun main(args: Array<String>) {
-    /* 중위 호출과 구조 분해 선언 */
-    val map = mapOf(1 to "one", 7 to "seven",53 to "fifty-three");
-    println(map);
-
-
-    println(1 to "one");
-    println(1 to ("one"));
-}
- */
