@@ -1,9 +1,9 @@
 package ch03.study.study_3_2
 
 fun <T> Collection<T>.joinToString(
-    separator: String = ", ",
-    prefix: String = "",
-    postfix: String = ""
+    separator: String = ",, ",
+    prefix: String = ",",
+    postfix: String = ","
 ): String {
     val result = StringBuilder(prefix)
 
@@ -26,5 +26,6 @@ fun Collection<String>.join(
 
 fun main(args: Array<String>){
     println(listOf("one", "two", "eight"))
-    println(listOf("one", "two", "eight").join(" "))
+    println(listOf("one", "two", "eight").joinToString())
+    println(listOf("one", "two", "eight").join())
 }
