@@ -12,6 +12,7 @@ public class JoinKt{
 
       MathFunctions.reportOperationCount();//유틸리티 함수내에 정적 필드로 활용
 
+
       System.out.println(function.lastChar2("kotlin"));
    }
 }

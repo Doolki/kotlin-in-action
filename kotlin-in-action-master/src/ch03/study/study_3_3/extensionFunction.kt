@@ -5,6 +5,10 @@ package extension
     String -> 수신객체 타입(type)
     this -> 수신객체 (Object)
  */
+fun String.lastChar5():Char {
+    return get(length-1);
+}
+
 fun String.lastChar2():Char {
     return this.get(this.length-1);
 }

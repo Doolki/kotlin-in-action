@@ -11,3 +11,4 @@ fun reportOperationCount(){ //정적 필드로 시스템이 초기화 될때까�
     multiplication++;
     println("Operation performed $multiplication times")
 }
+

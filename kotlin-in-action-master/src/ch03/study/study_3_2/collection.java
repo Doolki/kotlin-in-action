@@ -6,8 +6,6 @@ import Maths.MathFunctions;
 import strings.*;
 
 
-
-
 class collection {
     //[1,2,3] -> (1; 2; 3)
     public static void main(String[] args) {

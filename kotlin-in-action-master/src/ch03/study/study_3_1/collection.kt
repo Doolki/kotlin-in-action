@@ -48,10 +48,10 @@ fun test_1(){
 
 //다만 다른점은 코틀린에서는 자바보다 더 많은 컬랙션 기능을 제공하고 있어서 자바의 컬렉션 코드를 더욱 활용하는것이 가능하다.
 fun test_2(){
-    val String = listOf("frist","second","fourteenth");
+    val String = arrayListOf("frist","second","fourteenth");
     println(String.last()); //ArrayList 컬렉션에서 더 많은 기능을 코틀린에서 제공
 
-    val number = setOf(1,14,2)
+    val number = hashSetOf(1,14,2)
     println(number.max());  //HashSet 컬렉션에서 더 많은 기능을 코틀린에서 제공
 }
 

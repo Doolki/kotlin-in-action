@@ -23,16 +23,20 @@ fun main(args: Array<String>) {
 
     /* 자바보다 더 많은 컬렉션 제공*/
     val String = listOf("frist","second","fourteenth");
-    println(String.last()); //ArrayList 컬렉션에서 더 많은 기능을 코틀린에서 제공
+    println(String.last()); //Array 컬렉션에서 더 많은 기능을 코틀린에서 제공
 
     val number = setOf(1,14,2)
     println(number.max());  //HashSet 컬렉션에서 더 많은 기능을 코틀린에서 제공
 
-    /* 가변 인자 함수 */
-    val arrayList = listOf(2,3,4,5,6); //ArrayList에 원하는 만큼의 원소를 전달 가능
-    println(arrayList);
+    /* 가변길이 인자 함수 */
+    val List = listOf(2,3,4,5,6); //List에 원하는 만큼의 원소를 전달 가능(불변)
+    println(List);
 
-    val list = listOf("args: ", *args) //*args 연산자를 써 앞에 전달하려고 하는 내용을 ArrayList에 원소를 전달
+    /* 가변길이 인자 함수 */
+    val List2 = arrayOf(2,3,4,5,6); //List에 원하는 만큼의 원소를 전달 가능 (가변)
+    println(List2);
+
+    val list = listOf("args: ", *args) //*args 연산자를 써 앞에 전달하려고 하는 내용을 리스트에 원소를 전달
     println(list)
 
     /* 중위 호출 */

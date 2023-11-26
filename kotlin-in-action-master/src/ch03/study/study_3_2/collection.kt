@@ -54,7 +54,7 @@ fun main(args: Array<String>) {
     println("-----------------------------");
 
     //3.2.1 호출시 인자에 이름을 명시해서 간단하게 함수를 호출 가능하다 -> 각 문자열이 어떤 역할을 하는지 알수있다.
-    println(joinToString1(list, separator=";", prefix="(", postfix=")"));
+    println(joinToString4(list, separator=";", prefix="(", postfix=")"));
     println("-----------------------------");
 
     //3.2.2 호출시 오버로딩 (같은 이름의 메서드를 인자를 다르게 해서 여러번 정의) 할 필요없이 디폴트 파라메터값 명시로 이것을 해결
