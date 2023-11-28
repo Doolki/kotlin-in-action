@@ -13,7 +13,6 @@ class collection {
         System.out.println(list);
         System.out.println("-----------------------------");
         //3.2.1 각 문자열이 어떤 역할을 하는지 알 수 없다 -> 직접 함수 시크니쳐를 살펴봐야한다
-
         System.out.println(joinToString1(list, "; ", "(", ")"));
         System.out.println("-----------------------------");
 
@@ -32,23 +31,24 @@ class collection {
     /*
     3.2.1
      */
+    //System.out.println(joinToString1(list, "; ", "(", ")"));
     public static <T> String joinToString1(
             Collection<T> collection,
             String separator,
             String prefix,
             String postfix) {
 
-        StringBuilder result = new StringBuilder(prefix);
+        StringBuilder result = new StringBuilder(prefix);//(
 
         int index = 0;
         for (T element : collection) {
-            if (index > 0) result.append(separator);
-            result.append(element);
+            if (index > 0) result.append(separator);//;
+            result.append(element);//1
             index++;
-        }
+        }//(1;2;3
 
-        result.append(postfix);
-        return result.toString();
+        result.append(postfix);//
+        return result.toString();// (1;2;3)
     }
 
 
