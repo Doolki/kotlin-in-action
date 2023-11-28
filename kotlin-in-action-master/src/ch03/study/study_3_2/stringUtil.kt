@@ -19,4 +19,3 @@ fun <T> joinToString4(
     result.append(postfix)
     return result.toString()
 }
-

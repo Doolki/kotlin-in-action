@@ -11,13 +11,20 @@ public class example {
 
         //3.5.1 문자열을 특정 .,- 문자로 문자열을 나눌때 다음과 같이 정규식으로 표현가능하다.
         String input = "12.345-6.A";
+
+        //. split으로 표현 (구분 문자는 문자열을 나눌수없다)
+        String[] ex1 = input.split(".");
+        for(String part : ex1) {
+            System.out.println(part);
+        }
+
+        //정규식으로 표현
         String[] parts = input.split("\\.|\\-");
         for(String part : parts) {
             System.out.println(part);
         }
-        /*
-            정규식을 쓰지않는다면
-        */
+
+        //정규식을 쓰지않는다면
         String input2 = "12.345-6.A&A.A&B";
         StringTokenizer tokenizer = new StringTokenizer(input2, ".-&");
         List<String> parts2 = new ArrayList<>();
@@ -30,10 +37,7 @@ public class example {
             System.out.println(part);
         }
 
-        /*
-            3.5.2
-            코틀린 String 확장 함수를 쓰지않고 정규식없이 비슷한 형식으로 구현하려면
-         */
+        // 코틀린 String 확장 함수를 쓰지않고 정규식없이 비슷한 형식으로 구현하려면
         String path = "/Users/yole/kotlin-book/chapter.adoc";
 
         // 마지막 '/' 이전의 문자열을 추출하여 디렉토리 경로를 얻음
@@ -50,9 +54,9 @@ public class example {
 
         System.out.println("Dir: " + directory + ", name: " + fileName + ", ext: " + extension);
 
-        /*
-          3.5.2 정규식
-         */
+
+        //3.5.2 정규식
+
         String path3 = "/Users/yole/kotlin-book/chapter.adoc"; // Replace with your path
         String regex = "(.+)/(.+)\\.(.+)";
 
@@ -68,13 +72,12 @@ public class example {
         }
 
 
-        /*
-           3중 따옴표 문자열
-         */
+        // 3중 따옴표 문자열
         String kotlinLogo = "| //\n" +
                 ".|//\n" +
                 ".|/ \\";
         System.out.println(trimMargin(kotlinLogo, "."));
+
 
     }
     private static String trimMargin(String text, String marginPrefix) {

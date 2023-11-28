@@ -14,13 +14,13 @@ fun parsePath(path: String) {
 
 //3.5.2 (정규식이용)
 fun parsePath2(path: String) {
+   // val regex = """(.+)/(.+)\.(.+)""".toRegex()
     val regex = """(.+)/(.+)\.(.+)""".toRegex()
-    //val regex = """(.+)/(.+)""".toRegex()
-    val matchResult = regex.matchEntire(path)
+    val matchResult = regex.matchEntire(path) // matchEntire 메서드는 전달된 문자열이 정규 표현식과 완전히 일치하는지를 검사
     if (matchResult != null) {
-        val (directory,fileName) = matchResult.destructured
-       // val (directory, filename, extension) = matchResult.destructured
-        println("Dir3: $directory, name: $fileName");
+      //  val (directory,fileName) = matchResult.destructured
+        val (directory, filename, extension) = matchResult.destructured //destructured 속성은 이 일치 결과에서 캡쳐된 그룹(정규 표현식 내 괄호 ()에 의해 정의된 부분)을 쉽게 추출하고 사용
+        println("Dir3: $directory, name: $filename , extension:$extension");
     }
 }
 
@@ -31,9 +31,11 @@ val kotlinLogo = """| //
 
 
 fun main(args: Array<String>) {
+
     /*
        3.5.1 코틀린은 문자열 나누기가 간편하다
      */
+
     println("12.345-6.A&A.A&B".split(".","-","&"));
     /*
        자바에서 처럼 정규식으로 문자열을 나눌수도 있다.

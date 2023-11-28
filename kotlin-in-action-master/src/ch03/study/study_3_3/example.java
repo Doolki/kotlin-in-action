@@ -13,6 +13,7 @@ public class example {
 
         /* 프로퍼티 활용 */
         MathFunctions.reportOperationCount();//유틸리티 함수내에 정적 필드로 활용
+        MathFunctions.getMultiplication();
 
         /* extension 메소드의 유틸리티 함수를 모두 가져와서 임포트 */
         System.out.println(function.lastChar2("kotlin"));
