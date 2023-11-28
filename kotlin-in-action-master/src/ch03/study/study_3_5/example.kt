@@ -2,6 +2,7 @@
 package ch03.study.study_3_5;
 
 //3.5.2
+///Users/yole/kotlin-book/chapter.adoc
 fun parsePath(path: String) {
     val directory = path.substringBeforeLast("/") /* Users/yole/kotlin-book */
     val fullName = path.substringAfterLast("/") /* chapter.adoc */
@@ -13,6 +14,8 @@ fun parsePath(path: String) {
 }
 
 //3.5.2 (정규식이용)
+///Users/yole/kotlin-book/chapter.adoc
+
 fun parsePath2(path: String) {
    // val regex = """(.+)/(.+)\.(.+)""".toRegex()
     val regex = """(.+)/(.+)\.(.+)""".toRegex()
@@ -23,6 +26,12 @@ fun parsePath2(path: String) {
         println("Dir3: $directory, name: $filename , extension:$extension");
     }
 }
+/*
+(.+) : 이 부분이 정규 표현식의 핵심입니다.
+. : 어떤 한 문자를 의미
++ : 바로 앞의 문자나 패턴
+() : 괄호 안의 패턴을 하나의 그룹으로 취급
+ */
 
 val kotlinLogo = """| //
                    .|//

@@ -16,10 +16,12 @@ import ch03.study.study_3_4.Number
 
 open class View {
     open fun click() = println("View clicked")
+    //open fun View.showOff() = println("I'm a View!")
 }
 
 class Button: View() {//View 클래스를 상속받는 Button 클래스
     override fun click() = println("Button clicked")
+    //override fun View.showOff() =  println("I'm a button!");
 }
 
 val String.lastChar:Char get() = get(length -1);
@@ -35,7 +37,6 @@ fun main(args: Array<String>) {
     println("kotlin".muti2);
     val sb2 = StringBuilder("good");
     sb2.test = '!';
-
 
     /*  확장함수 호출 */
     println("kotlin".fristNum());//수신객체 타입
