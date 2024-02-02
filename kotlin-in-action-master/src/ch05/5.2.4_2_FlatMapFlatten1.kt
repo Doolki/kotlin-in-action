@@ -8,4 +8,11 @@ fun main(args: Array<String>) {
                        Book("Good Omens", listOf("Terry Pratchett",
                                                  "Neil Gaiman")))
     println(books.flatMap { it.authors }.toSet())
+    println(books.map { it.authors }.flatten().toSet())
+
+    val numbers = listOf(listOf(1,2,3), listOf(5,6,7), listOf(8,9,0))
+    println(numbers.flatten())
+    println(numbers.flatMap { it.map { value -> value*2 } })
+
+
 }
