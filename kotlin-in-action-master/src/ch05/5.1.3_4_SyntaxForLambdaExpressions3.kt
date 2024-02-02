@@ -7,4 +7,19 @@ fun main(args: Array<String>) {
     val names = people.joinToString(separator = " ",
                           transform = { p: Person -> p.name })
     println(names)
+    println(people.maxBy { it.age })
+    val list = listOf("a", "b", "c", "d", "e")
+
+    val listToString = list.joinToString(
+            separator = ","
+            , prefix = "["
+            , postfix = "]"
+            , limit = 3
+            , truncated = "etc"
+            , transform = { it.toUpperCase() }
+    )
+
+    println(listToString) // [A,B,C,etc]
+
+
 }

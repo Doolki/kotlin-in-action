@@ -13,4 +13,22 @@ fun alphabet(): String {
 
 fun main(args: Array<String>) {
     println(alphabet())
+
+    val result = with(StringBuilder()) {
+        append("Kotlin ")
+        append("in ")
+        append("Action!")
+        toString()
+    }
+
+    val stringBuilder = StringBuilder()
+    stringBuilder.append("Kotlin ")
+    stringBuilder.append("in ")
+    stringBuilder.append("Action!")
+
+    val resultNoWith = stringBuilder.toString()
+
+    println(result)
+    println(resultNoWith)
+
 }
